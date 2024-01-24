@@ -6,3 +6,4 @@
 4 - Play with strings <br />
 5 - Slicing strings <br />
 6 - Create new sentence <br />
+7 - import this easter egg <br />
