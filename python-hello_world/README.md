@@ -2,3 +2,4 @@
 0 - Hello, print <br />
 1 - Print integer <br />
 2 - Print float <br />
+3 - Print String <br />
