@@ -6,3 +6,4 @@
 4 - print numbers in range 0-98 in decimal and hexadecimal values <br />
 5 - print numbers in range 00-99 <br />
 6 - print different combination of all 2digit numbers <br />
+7 - print if given char lowercase lower, upper if uppercase <br />
