@@ -5,3 +5,4 @@
 3 - print lowercase alphabet but q,e by their ASCII values <br />
 4 - print numbers in range 0-98 in decimal and hexadecimal values <br />
 5 - print numbers in range 00-99 <br />
+6 - print different combination of all 2digit numbers <br />
