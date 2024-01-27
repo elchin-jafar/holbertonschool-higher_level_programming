@@ -7,3 +7,4 @@
 5 - print numbers in range 00-99 <br />
 6 - print different combination of all 2digit numbers <br />
 7 - print if given char lowercase lower, upper if uppercase <br />
+8 - change all characters too uppercase <br />
