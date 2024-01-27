@@ -10,4 +10,5 @@
 8 - change all characters too uppercase <br />
 9 - print and return last digit of given number <br />
 10 - add func take a,b and returns their sum <br />
-11 - powe func take a,b and returns a ^ b <br />
+11 - power func take a,b and returns a ^ b <br />
+12 - print numbers in range 1-100, print fizz, buzz, fizzbuzz instead according to if numbers are multipes of 3,5,15 <br />
