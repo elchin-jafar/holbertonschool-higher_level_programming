@@ -8,3 +8,4 @@
 6 - print different combination of all 2digit numbers <br />
 7 - print if given char lowercase lower, upper if uppercase <br />
 8 - change all characters too uppercase <br />
+9 - print and return last digit of given number <br />
