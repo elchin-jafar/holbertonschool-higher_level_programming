@@ -9,3 +9,4 @@
 7 - tuples addition <br />
 8 - return length of and first letter of given string as tuple <br />
 9 - find and return max number of given list without using builtin max method <br />
+10 - find if given number in list multiples of 2 or not. according to this statement return true or false as list <br />
