@@ -8,3 +8,4 @@
 6 - print matrix <br />
 7 - tuples addition <br />
 8 - return length of and first letter of given string as tuple <br />
+9 - find and return max number of given list without using builtin max method <br />
