@@ -6,3 +6,4 @@
 4 - make copy of list, and modify new one without touching original one <br />
 5 - remove all c and C chars from given string, and return new one <br />
 6 - print matrix <br />
+7 - tuples addition <br />
