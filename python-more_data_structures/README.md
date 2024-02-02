@@ -5,3 +5,4 @@
 3 - finds common element in 2 given set <br />
 4 - finds only different elements in 2 givet set <br />
 5 - return length of given dictionary <br />
+6 - print dictionary keys and values but keys should sorted <br />
