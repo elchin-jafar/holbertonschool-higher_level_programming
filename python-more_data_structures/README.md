@@ -7,3 +7,4 @@
 5 - return length of given dictionary <br />
 6 - print dictionary keys and values but keys should sorted <br />
 7 - update given dictionary with new key and value set <br />
+8 - delete key from dictionary <br />
