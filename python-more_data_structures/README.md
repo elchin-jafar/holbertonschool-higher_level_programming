@@ -9,3 +9,4 @@
 7 - update given dictionary with new key and value set <br />
 8 - delete key from dictionary <br />
 9 - multiply values of dictionary <br />
+10 - return key with biggest value <br />
