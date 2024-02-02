@@ -8,3 +8,4 @@
 6 - print dictionary keys and values but keys should sorted <br />
 7 - update given dictionary with new key and value set <br />
 8 - delete key from dictionary <br />
+9 - multiply values of dictionary <br />
