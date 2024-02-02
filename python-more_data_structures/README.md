@@ -4,3 +4,4 @@
 2 - sum all uniqe nums in given list <br />
 3 - finds common element in 2 given set <br />
 4 - finds only different elements in 2 givet set <br />
+5 - return length of given dictionary <br />
