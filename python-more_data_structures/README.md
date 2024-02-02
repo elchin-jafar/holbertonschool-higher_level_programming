@@ -6,3 +6,4 @@
 4 - finds only different elements in 2 givet set <br />
 5 - return length of given dictionary <br />
 6 - print dictionary keys and values but keys should sorted <br />
+7 - update given dictionary with new key and value set <br />
