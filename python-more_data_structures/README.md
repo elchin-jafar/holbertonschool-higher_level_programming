@@ -10,3 +10,4 @@
 8 - delete key from dictionary <br />
 9 - multiply values of dictionary <br />
 10 - return key with biggest value <br />
+11 - return list according given list but multiply its elements to given num <br />
