@@ -4,4 +4,5 @@
 
 
 class Square:
+    """simple class' body"""
     pass
