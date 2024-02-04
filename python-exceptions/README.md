@@ -5,3 +5,4 @@
 3 - integers division with debug <br />
 4 - divide a list <br />
 5 - raise simple TypeError <br />
+6 - raise error with message <br />
