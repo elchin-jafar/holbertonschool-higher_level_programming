@@ -5,3 +5,4 @@
 3 - public instance method which calcs area of square <br />
 4 - implement setter and getter to size field <br />
 5 - print square with # size of Square instance <br />
+6 - change position of printed square by adding x,y values <br />
