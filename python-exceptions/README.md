@@ -4,3 +4,4 @@
 2 - safe list int printing <br />
 3 - integers division with debug <br />
 4 - divide a list <br />
+5 - raise simple TypeError <br />
