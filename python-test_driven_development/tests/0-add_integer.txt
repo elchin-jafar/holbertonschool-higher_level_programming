@@ -3,13 +3,81 @@ Tests for text_indentation in 0-add_integer.py
 ===================================================
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Test 1. Check 2 int number
 >>> add_integer(1, 2)
 3
+
+Test 2. Check negative number
 >>> add_integer(100, -2)
 98
+
+Test 3. Check only one argument
 >>> add_integer(2)
 100
+
+Test 4. Check float number
 >>> add_integer(100.3, -2)
 98
+
+Test 5. 2nd argument as float
 >>> add_integer(10, 3.7)
 13
+
+>>> add_integer(69, 42)
+111
+
+>> add_integer(inf)
+inf
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(9223372036854775807, 1)
+9223372036854775808
+
+>>> add_integer('hello', 43)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(23, 'holberton')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(None, 'holberton')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer('12a', 'Zoref')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(23, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(23, [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer([3, 4, 5])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer([])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
