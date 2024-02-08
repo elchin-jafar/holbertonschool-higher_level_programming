@@ -1,0 +1,15 @@
+===================================================
+Tests for text_indentation in 0-add_integer.py
+===================================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(10, 3.7)
+13
