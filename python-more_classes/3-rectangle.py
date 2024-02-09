@@ -52,6 +52,6 @@ class Rectangle:
         for h in range(self.__height):
             for w in range(self.__width):
                 res += "#"
-                if (w == self.__width - 1):
+                if (h != self.__height - 1 and w == self.__width - 1):
                     res += "\n"
         return res
