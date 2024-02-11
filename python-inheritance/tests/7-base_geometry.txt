@@ -1,0 +1,36 @@
+====================
+Base Geometry Module
+====================
+
+Import module:
+==============
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Function:
+=========
+
+BaseGeometry class has 2 instance methods area(self), def integer_validator(self, name, value)
+
+    * you can assume name is always a string
+
+Test cases:
+===========
+
+Test case 1: Expecting no error on passing positive numbers to integer_validator's value argument
+    >>> new_obj = BaseGeometry()
+    >>> new_obj.integer_validator("my_int", 12)
+
+    >>> new_obj.integer_validator("width", 89)
+
+Test case 2: Expecting Type Error on passing strings to integer_validator's value argument
+    >>> new_obj.integer_validator("name", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Test case 3: Expecting Value Error on passing negative numbers to integer_validator's value argument
+    >>> new_obj.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: distance must be greater than 0
