@@ -15,7 +15,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """placeholder"""
-       
-        if type(attrs) is list and all([type(x) == str for x in attrs]):
+
+        if type(attrs) is list and all([type(x) is str for x in attrs]):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
-        return(self.__dict__) 
+        return (self.__dict__)
