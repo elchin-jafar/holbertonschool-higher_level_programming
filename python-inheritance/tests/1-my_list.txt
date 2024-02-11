@@ -43,3 +43,17 @@ Test case 3: Expecting print empty list when elements dont appended
 
     >>> new_list.print_sorted()
     []
+
+Test case 4: Expecting print_sorted print new list:
+    >>> new_list = MyList()
+    >>> new_list.append(4)
+    >>> new_list.append(6)
+    >>> new_list.append(2)
+    >>> print(new_list)
+    [4, 6, 2]
+
+    >>> new_list.print_sorted()
+    [2, 4, 6]
+
+    >>> print(new_list)
+    [4, 6, 2]
