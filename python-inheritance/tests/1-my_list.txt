@@ -14,7 +14,7 @@ Function:
 
 Test Cases:
 ===========
-
+Test case 1: Expecting to order a disordered list of positive numbers
     >>> new_list = MyList()
     >>> new_list.append(4)
     >>> new_list.append(6)
@@ -24,3 +24,22 @@ Test Cases:
 
     >>> new_list.print_sorted()
     [1, 4, 6]
+
+Test case 2: Expecting to order a disordered list of negative numbers
+    >>> new_list = MyList()
+    >>> new_list.append(-4)
+    >>> new_list.append(-5)
+    >>> new_list.append(-2)
+    >>> print(new_list)
+    [-4, -5, -2]
+
+    >>>new_list.print_sorted()
+    [-5, -4, -2]
+
+Test case 3: Expecting print empty list when elements dont appended
+    >>> new_list = MyList()
+    >>> print(new_list)
+    []
+
+    >>> new_list.print_sorted()
+    []
