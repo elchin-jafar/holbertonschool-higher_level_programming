@@ -1,0 +1,26 @@
+==================
+Print sorted lists
+==================
+
+Import module:
+==============
+    >>> MyList = __import__('1-my_list').MyList
+
+Function:
+=========
+    MyList is a class that inherits list
+
+        * You can assume that all the elements of the list will be of type int
+
+Test Cases:
+===========
+
+    >>> new_list = MyList()
+    >>> new_list.append(4)
+    >>> new_list.append(6)
+    >>> new_list.append(1)
+    >>> print(new_list)
+    [4, 6, 1]
+
+    >>> new_list.print_sorted()
+    [1, 4, 6]
