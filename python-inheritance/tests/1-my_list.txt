@@ -33,7 +33,7 @@ Test case 2: Expecting to order a disordered list of negative numbers
     >>> print(new_list)
     [-4, -5, -2]
 
-    >>>new_list.print_sorted()
+    >>> new_list.print_sorted()
     [-5, -4, -2]
 
 Test case 3: Expecting print empty list when elements dont appended
