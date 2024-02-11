@@ -34,3 +34,9 @@ Test case 3: Expecting Value Error on passing negative numbers to integer_valida
     Traceback (most recent call last):
     ...
     ValueError: distance must be greater than 0
+
+Test case 4: Expecting Exception error occurs on calling area method
+    >>> new_obj.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
