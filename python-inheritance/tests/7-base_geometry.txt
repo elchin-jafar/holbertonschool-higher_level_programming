@@ -64,3 +64,21 @@ Test case 8: Expecting Exception error occurs on calling area method
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+Test case 9: Expecting Type Error on passing tuple to value argument
+    >>> new_obj.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Test case 10: Expecting Type Error on passing list to value argument
+    >>> new_obj.integer_validator("age", [3])
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Test case 11: Expecting Type Error on passing None to value argument
+    >>> new_obj.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
