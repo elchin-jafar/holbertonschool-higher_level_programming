@@ -43,6 +43,8 @@ Test case 4: Expecting Type Error on passing set as value argument
 
 Test case 5: Expecting Type Error on not passing value while calling method
     >>> new_obj.integer_validator("testField")
+    Traceback (most recent call last):
+    ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Test case 6: Expecting Type Error on passing boolean value to value argument
@@ -55,7 +57,7 @@ Test case 7: Expecting Value Error on passing 0 to value argument
     >>> new_obj.integer_validator("isZero", 0)
     Traceback (most recent call last):
     ...
-    ValueError: isZeor must be greater than 0
+    ValueError: isZero must be greater than 0
 
 Test case 8: Expecting Exception error occurs on calling area method
     >>> new_obj.area()
