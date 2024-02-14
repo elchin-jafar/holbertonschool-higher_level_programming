@@ -65,13 +65,19 @@ class Rectangle(Base):
         self.__y = value
 
     def integer_validator(self, name, value):
+        """checks value input if it has int type or not"""
+
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
 
     def is_zero_or_lower(self, name, value):
+        """raises error if value is equal or lower than 0"""
+
         if value <= 0:
             raise ValueError("{} must be > 0".format(name))
 
     def is_lower_than_zero(self, name, value):
+        """raises error if value is lower than 0"""
+
         if value < 0:
             raise ValueError("{} must be >= 0".format(name))
