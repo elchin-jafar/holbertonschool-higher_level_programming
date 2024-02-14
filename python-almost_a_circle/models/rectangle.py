@@ -11,6 +11,14 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.integer_validator("x", x)
+        self.integer_validator("y", y)
+        self.is_zero_or_lower("width", width)
+        self.is_zero_or_lower("height", height)
+        self.is_lower_than_zero("x", x)
+        self.is_lower_than_zero("y", y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -22,6 +30,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.integer_validator("width", value)
+        self.is_zero_or_lower("width", value)
         self.__width = value
 
     @property
@@ -30,6 +40,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.integer_validator("height", value)
+        self.is_zero_or_lower("height", value)
         self.__height = value
 
     @property
@@ -38,6 +50,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.integer_validator("x", value)
+        self.is_lower_than_zero("x", value)
         self.__x = value
 
     @property
@@ -46,4 +60,18 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.integer_validator("y", value)
+        self.is_lower_than_zero("y", value)
         self.__y = value
+
+    def integer_validator(self, name, value):
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+
+    def is_zero_or_lower(self, name, value):
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+
+    def is_lower_than_zero(self, name, value):
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(name))
