@@ -109,7 +109,7 @@ class Rectangle(Base):
         height = self.height
         return "[{}] ({}) {}/{} - {}/{}".format(name, id, x, y, width, height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update instances"""
 
         if len(args) > 0:
@@ -122,3 +122,18 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+
+        if args and len(args) > 0:
+            return
+
+        for k, v in kwargs.items():
+            if k == "id":
+                self.id = v
+            elif k == "width":
+                self.width = v
+            elif k == "height":
+                self.height = v
+            elif k == "x":
+                self.x = v
+            elif k == "y":
+                self.y = v
