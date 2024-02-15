@@ -19,10 +19,10 @@ class Rectangle(Base):
         self.is_zero_or_lower("height", height)
         self.is_lower_than_zero("x", x)
         self.is_lower_than_zero("y", y)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -81,3 +81,6 @@ class Rectangle(Base):
 
         if value < 0:
             raise ValueError("{} must be >= 0".format(name))
+
+    def area(self):
+        return self.__width * self.__height
