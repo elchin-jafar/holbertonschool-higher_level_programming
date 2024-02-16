@@ -24,3 +24,15 @@ class Square(Rectangle):
         y = self.y
         size = self.size
         return "[{}] ({}) {}/{} - {}".format(name, id, x, y, size)
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        self.integer_validator("size", value)
+        self.is_zero_or_lower("size", value)
+        self.__size = value
+        self.__width = self.__size
+        self.__height = self.__size
