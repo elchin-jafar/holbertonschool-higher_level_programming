@@ -30,7 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """placeholder"""
+        """serialize given list and write it to file"""
 
         filename = "{}.json".format(cls.__name__)
 
@@ -41,3 +41,12 @@ class Base:
                 list = [instance.to_dictionary() for instance in list_objs]
                 serialized_result = Base.to_json_string(list)
                 jsonfile.write(serialized_result)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """parse json string to python dictionary (deserialize)"""
+
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
