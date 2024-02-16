@@ -13,7 +13,6 @@ class Square(Rectangle):
         """initialize square"""
 
         super().__init__(size, size, x, y, id)
-        self.size = self.width
 
     def __str__(self):
         """defines output of printing instances of this class"""
@@ -27,12 +26,11 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         self.integer_validator("size", value)
         self.is_zero_or_lower("size", value)
-        self.__size = value
-        self.__width = self.__size
-        self.__height = self.__size
+        self.width = value
+        self.height = value
