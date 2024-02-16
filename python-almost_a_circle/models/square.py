@@ -34,3 +34,31 @@ class Square(Rectangle):
         self.is_zero_or_lower("width", value)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """
+            updates objects' fields according
+            to passed arguments to update (this) method
+        """
+
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.size = args[1]
+        if len(args) > 2:
+            self.x = args[2]
+        if len(args) > 3:
+            self.y = args[3]
+
+        if args and len(args) > 0:
+            return
+
+        for k, v in kwargs.items():
+            if k == "id":
+                self.id = v
+            elif k == "size":
+                self.width = v
+            elif k == "x":
+                self.x = v
+            elif k == "y":
+                self.y = v
