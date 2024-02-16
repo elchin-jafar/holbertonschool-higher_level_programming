@@ -39,5 +39,5 @@ class Base:
 
         serialized_result = cls.to_json_string(list)
 
-        with open("Rectangle.json", "w") as f:
+        with open("{}.json".format(cls.__name__), "w") as f:
             f.write(serialized_result)
