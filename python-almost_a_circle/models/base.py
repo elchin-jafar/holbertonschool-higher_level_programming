@@ -32,12 +32,12 @@ class Base:
     def save_to_file(cls, list_objs):
         """placeholder"""
 
-        list = []
+        filename = "{}.json".format(cls.__name__)
 
-        for instance in list_objs:
-            list.append(instance.to_dictionary())
-
-        serialized_result = cls.to_json_string(list)
-
-        with open("{}.json".format(cls.__name__), "w") as f:
-            f.write(serialized_result)
+        with open(filename, "w") as jsonfile:
+            if list_objs is None:
+                jsonfile.write('[]')
+            else:
+                list = [instance.to_dictionary() for instance in list_objs]
+                serialized_result = Base.to_json_string(list)
+                jsonfile.write(serialized_result)
