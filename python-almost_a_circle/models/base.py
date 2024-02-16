@@ -27,3 +27,17 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """placeholder"""
+
+        list = []
+
+        for instance in list_objs:
+            list.append(instance.to_dictionary())
+
+        serialized_result = cls.to_json_string(list)
+
+        with open("Rectangle.json", "w") as f:
+            f.write(serialized_result)
