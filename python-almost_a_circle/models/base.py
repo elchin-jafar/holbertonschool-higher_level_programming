@@ -55,7 +55,9 @@ class Base:
     def create(cls, **dictionary):
         """create new instance, update it and return it"""
 
-        if dictionary and dictionary != {}:
-            dummy = cls(3, 2, 5)
-            dummy.update(**dictionary)
-            return dummy
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(3, 2)
+        else:
+            dummy = cls(3)
+        dummy.update(**dictionary)
+        return dummy
