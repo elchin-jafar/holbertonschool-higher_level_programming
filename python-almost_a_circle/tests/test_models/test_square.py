@@ -49,3 +49,7 @@ class TestSquare(unittest.TestCase):
     def test_zero_size(self):
         with self.assertRaises(ValueError):
             Square(0)
+
+    def test_str(self):
+        s = Square(1, 2, 3, 4)
+        self.assertEqual(s.__str__(), "[Square] (4) 2/3 - 1")
