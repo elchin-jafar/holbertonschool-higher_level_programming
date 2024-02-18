@@ -29,3 +29,23 @@ class TestSquare(unittest.TestCase):
         s1 = Square(10, 2, 2)
         s2 = Square(2, 2, 10)
         self.assertEqual(s1.id, s2.id - 1)
+
+    def test_square_typeError(self):
+        with self.assertRaises(TypeError):
+            Square('1')
+        with self.assertRaises(TypeError):
+            Square(1, '2')
+        with self.assertRaises(TypeError):
+            Square(1, 2, '3')
+
+    def test_square_valueError(self):
+        with self.assertRaises(ValueError):
+            Square(-1)
+        with self.assertRaises(ValueError):
+            Square(1, -2)
+        with self.assertRaises(ValueError):
+            Square(1, 2, -3)
+
+    def test_zero_size(self):
+        with self.assertRaises(ValueError):
+            Square(0)
