@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 import unittest
+import sys
+from io import StringIO
 from models.rectangle import Rectangle
 
 
@@ -14,7 +16,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_typeError(self):
         with self.assertRaises(TypeError):
-            Rectangle('1')
+            Rectangle('1', 2)
         with self.assertRaises(TypeError):
             Rectangle(1, '2')
         with self.assertRaises(TypeError):
@@ -50,4 +52,34 @@ class TestRectangle(unittest.TestCase):
 
     def test_str(self):
         r = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(r.__str__(), "[Rectangle] (5) 3/4 - 1/2") 
+        self.assertEqual(r.__str__(), "[Rectangle] (5) 3/4 - 1/2")
+
+    def test_display(self):
+        r = Rectangle(2, 2, 1, 1, 1)
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        r.display()
+        printed_output = captured_output.getvalue()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(printed_output, "\n ##\n ##\n")
+
+    def test_display_without_y(self):
+        r = Rectangle(2, 2, 1)
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        r.display()
+        printed_output = captured_output.getvalue()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(printed_output, " ##\n ##\n")
+
+    def test_display_without_x_y(self):
+        r = Rectangle(2, 2)
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        r.display()
+
+        printed_output = captured_output.getvalue()
+
+        sys.stdout = sys.__stdout__
+        self.assertEqual(printed_output, "##\n##\n")
