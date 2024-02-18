@@ -82,3 +82,44 @@ class TestSquare(unittest.TestCase):
         self.assertEqual("[Square] (4) 4/1 - 4", str(s))
         s.update(id=5, size=5, x=5, y=5)
         self.assertEqual("[Square] (5) 5/5 - 5", str(s))
+
+    def test_create(self):
+        dict = {"x": 3, "y": 4, "id": 89, "size": 1}
+        s = Square.create(**dict)
+        self.assertEqual(str(s), "[Square] (89) 3/4 - 1")
+
+    def test_save_to_file(self):
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+
+        Square.save_to_file([Square(1, 2, id=13)])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), '[{"id": 13, "size": 1, "x": 2, "y": 0}]')
+
+    def test_load_from_file(self):
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+
+        self.assertEqual(Square.load_from_file(), [])

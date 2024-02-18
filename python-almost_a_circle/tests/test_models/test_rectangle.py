@@ -115,6 +115,11 @@ class TestRectangle(unittest.TestCase):
         r.update(id=6, width=6, height=6, x=6, y=6)
         self.assertEqual("[Rectangle] (6) 6/6 - 6/6", str(r))
 
+    def test_create(self):
+        dict = {"height": 2, "width": 1, "x": 3, "y": 4, "id": 89}
+        r = Rectangle.create(**dict)
+        self.assertEqual(str(r), "[Rectangle] (89) 3/4 - 1/2")
+
     def test_save_to_file(self):
         try:
             os.remove("Rectangle.json")
