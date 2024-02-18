@@ -8,4 +8,9 @@ class TestBase(unittest.TestCase):
 
     def test_id_exists(self):
         b1 = Base()
-        self.assertTrue(b1.id)
+        b2 = Base()
+        self.assertEqual(b1.id, 1)
+        self.assertEqual(b2.id, 2)
+
+if __name__ == '__main__':
+    unittest.main()
