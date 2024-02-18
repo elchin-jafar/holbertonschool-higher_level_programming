@@ -76,10 +76,10 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(2, 2)
         captured_output = StringIO()
         sys.stdout = captured_output
-
         r.display()
-
         printed_output = captured_output.getvalue()
-
         sys.stdout = sys.__stdout__
         self.assertEqual(printed_output, "##\n##\n")
+
+if __name__ == "__main__":
+    unittest.main()
