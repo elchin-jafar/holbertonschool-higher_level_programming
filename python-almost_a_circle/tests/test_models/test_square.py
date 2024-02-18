@@ -2,6 +2,9 @@
 
 import unittest
 from models.square import Square
+import sys
+from io import StringIO
+import os
 
 
 class TestSquare(unittest.TestCase):
@@ -121,5 +124,7 @@ class TestSquare(unittest.TestCase):
             os.remove("Square.json")
         except:
             pass
-
         self.assertEqual(Square.load_from_file(), [])
+
+if __name__ == "__main__":
+    unittest.main()
