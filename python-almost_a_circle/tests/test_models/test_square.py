@@ -11,9 +11,13 @@ class TestSquare(unittest.TestCase):
     """test square class"""
 
     def test_instanciate_works(self):
-        s = Square(2)
-        self.assertEqual(s.size, 2)
-
+        s1 = Square(2)
+        s2 = Square(1, 2)
+        s3 = Square(1, 2, 3)
+        self.assertEqual(s1.size, 2)
+        self.assertEqual(s2.size, 1)
+        self.assertEqual(s3.size, 1)
+        
     def test_no_args(self):
         with self.assertRaises(TypeError):
             Square()
