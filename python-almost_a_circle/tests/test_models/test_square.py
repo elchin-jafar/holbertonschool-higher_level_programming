@@ -16,7 +16,10 @@ class TestSquare(unittest.TestCase):
         s3 = Square(1, 2, 3)
         self.assertEqual(s1.size, 2)
         self.assertEqual(s2.size, 1)
+        self.assertEqual(s2.x, 2)
         self.assertEqual(s3.size, 1)
+        self.assertEqual(s3.x, 2)
+        self.assertEqual(s3.y, 3)
         
     def test_no_args(self):
         with self.assertRaises(TypeError):
