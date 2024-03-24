@@ -1,2 +1,3 @@
--- list all tables of db
-show tables;
+-- list all tables of db.
+SHOW TABLES;
+
